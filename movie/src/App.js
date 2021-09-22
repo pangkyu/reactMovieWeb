@@ -1,22 +1,27 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
 
-function Food({fav}){
-  return <h1>I like {fav}</h1>
-}
 
+class App extends React.Component{
+  state = {
+    isLoading : true,
+    movies : []
+  }
 
-function renderFood(dish){
-  console.log(dish);
-  return <Food name = {dish.name} picture = {dish.image}/>
-}
+  componentDidMount(){
+    setTimeout(() =>{
+      this.setState({isLoading : false});
+    }, 6000);
+  }
 
-function App() {
-  return (
-    <div>
-      {foodILike.map(renderFood)}
-    </div>
-  );
+  render(){
+    const { isLoading } = this.state;
+    return( 
+      <div>
+        {isLoading ? "Loading" : "we are ready"}
+      </div>
+    );
+  }
 }
 
 export default App;
