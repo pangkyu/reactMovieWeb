@@ -56,29 +56,3 @@
 
 
     ==> setState() 호출 -> component 호출 -> render호출 -> 업데이트 완료후 compoentDidUpdate실행
-
----
-
-    - fetch
-
-    // 데이터를 fetch
-    class App extends React.Component{
-    state = {
-        isLoading : true
-    }
-
-    componentDidMount(){
-        setTimeout(() =>{
-        this.setState({isLoading : false});
-        }, 6000);
-    }
-
-    render(){
-        const { isLoading } = this.state;
-        return(
-        <div>
-            {isLoading ? "Loading" : "we are ready"}
-        </div>
-        );
-    }
-    }
