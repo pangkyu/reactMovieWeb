@@ -47,7 +47,6 @@ body,
   align-items: flex-start;
   justify-content: space-between;
   padding: 20px;
-  position: relative;
   color: #adaeb9;
   border-radius: 5px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
